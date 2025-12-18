@@ -4,6 +4,8 @@ using UnityEngine;
 public class EnemySoldier : MonoBehaviour
 {
     public float speed; // Enemy movement speed
+    public float shootSpeed; // Shooting speed or rate
+    public GameObject bullet; // Bullet prefab to instantiate
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,10 +23,12 @@ public class EnemySoldier : MonoBehaviour
     {   
         // Move the enemy horizontally
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+        shoot();
     }
     void shoot()
     {
-        //shoot logic here
+        // Shooting logic here
+        Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
