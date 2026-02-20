@@ -30,7 +30,7 @@ public class EnemySoldier : MonoBehaviour
     void shoot()
     {
         // Shooting logic here
-        Instantiate(bullet, transform.position, Quaternion.identity);
+        //Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
