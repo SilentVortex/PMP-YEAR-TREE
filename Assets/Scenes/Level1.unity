@@ -5305,10 +5305,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1976369037888682464, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3833007104139936767, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84.699
@@ -5347,14 +5343,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3833007104139936767, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894290276976455210, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
-      propertyPath: m_BodyType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894290276976455210, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
-      propertyPath: m_Simulated
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7396659803964251049, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
@@ -5812,6 +5800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoldierRegular
       objectReference: {fileID: 0}
+    - target: {fileID: 2614113808054460846, guid: eac08d386ed72804b89be524be484281, type: 3}
+      propertyPath: m_TagString
+      value: SoldierBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 3575590465057538329, guid: eac08d386ed72804b89be524be484281, type: 3}
       propertyPath: m_LocalPosition.x
       value: 84.08496
@@ -5853,8 +5845,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4419186395279798237, guid: eac08d386ed72804b89be524be484281, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419186395279798237, guid: eac08d386ed72804b89be524be484281, type: 3}
       propertyPath: shootSpeed
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

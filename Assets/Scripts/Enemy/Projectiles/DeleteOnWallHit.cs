@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class DeleteOnWallHit : MonoBehaviour
 {
-    public float bulletSpeed;
+    [SerializeField] float bulletSpeed;
+    [SerializeField] Rigidbody2D rb;
+
     void Update()
     {
         // Move the projectile forward based on its speed
-        transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+        //transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime,0,0);
+        rb.AddForce(Vector2.right * bulletSpeed, ForceMode2D.Force);
+        
     }
     // Called when this collider/rigidbody starts colliding with another collider/rigidbody
     void OnCollisionEnter2D(Collision2D collision)
