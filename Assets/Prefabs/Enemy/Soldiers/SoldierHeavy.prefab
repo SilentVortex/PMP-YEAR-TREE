@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 7353020463415919730}
   - component: {fileID: 4419186395279798237}
   m_Layer: 0
-  m_Name: SoldierRegular
+  m_Name: SoldierHeavy
   m_TagString: SoldierBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -263,6 +263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bf1ac9d48bfcb428fb59c167d69560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  shootSpeed: 10
-  bullet: {fileID: 7396659803964251049, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
+  speed: 0.25
+  shootSpeed: 2
+  bulletLeft: {fileID: 7396659803964251049, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
+  bulletRight: {fileID: 7396659803964251049, guid: 7e355d76cba157d4bab1f20fdba26fe5, type: 3}
+  Direction: 1

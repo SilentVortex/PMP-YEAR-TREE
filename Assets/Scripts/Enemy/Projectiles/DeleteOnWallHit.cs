@@ -5,12 +5,15 @@ public class DeleteOnWallHit : MonoBehaviour
 {
     [SerializeField] float bulletSpeed;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] bool isFiringLeft; // Determines the direction of the projectile
+    [SerializeField] bool isFiringRight; // Determines the direction of the projectile
 
+    void Start()
+    {
+        shootDirection();
+    }
     void Update()
     {
-        // Move the projectile forward based on its speed
-        //transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime,0,0);
-        rb.AddForce(Vector2.right * bulletSpeed, ForceMode2D.Force);
         
     }
     // Called when this collider/rigidbody starts colliding with another collider/rigidbody
@@ -29,4 +32,23 @@ public class DeleteOnWallHit : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>()?.TakeDamage(1);
         }
     }
+
+    void shootDirection()
+    {
+        // Initialize the projectile's velocity for either left or right.
+        if (isFiringLeft)
+        {
+            rb.AddForce(Vector2.left * bulletSpeed, ForceMode2D.Impulse);
+        }
+        else if (isFiringRight)
+        {
+            rb.AddForce(Vector2.right * bulletSpeed, ForceMode2D.Impulse);
+        }
+        DestroyTimer();
+    }
+    void DestroyTimer()
+    {
+        // Destroy the projectile after a certain time to prevent it from existing indefinitely
+        Destroy(gameObject, 5f); // Adjust the time as needed
+    }    
 }

@@ -1,18 +1,22 @@
 
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class EnemySoldier : MonoBehaviour
 {
-    public float speed; // Enemy movement speed
-    public float shootSpeed; // Shooting speed or rate
-    public GameObject bullet; // Bullet prefab to instantiate
-    private float Direction = 1; // Direction of movement (1 for right, -1 for left)
+    [SerializeField] float speed; // Enemy movement speed
+    [SerializeField] float shootSpeed; // Shooting speed or rate
+    [SerializeField] GameObject bulletLeft; // Bullet prefab to instantiate
+    [SerializeField] GameObject bulletRight; // Bullet prefab to instantiate
+    [SerializeField] float Direction = 1; // Direction of movement (1 for right, -1 for left)
+    [SerializeField] Transform bulletSpawnPoint; // Spawn point for bullets
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(Shoot());
     }
 
     void Update()
@@ -25,12 +29,24 @@ public class EnemySoldier : MonoBehaviour
     {   
         // Move the enemy horizontally
         transform.Translate(speed * Direction * Time.deltaTime,0,0);
-        shoot();
+        
     }
-    void shoot()
+
+    IEnumerator Shoot()
     {
-        // Shooting logic here
-        //Instantiate(bullet, transform.position, Quaternion.identity);
+        for (;;)
+        {
+            if (Direction == -1)
+            {
+                Instantiate(bulletLeft, bulletSpawnPoint.position, Quaternion.identity); // Instantiate the bullet at the spawn point
+            }
+            else if (Direction == 1)
+            {
+                Instantiate(bulletRight, bulletSpawnPoint.position, Quaternion.identity); // Instantiate the bullet at the spawn point
+            }
+            // Instantiate the bullet at the spawn point
+            yield return new WaitForSeconds(shootSpeed); // Wait for the specified shoot speed before shooting again
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -40,7 +56,6 @@ public class EnemySoldier : MonoBehaviour
             Direction *= -1; // Reverse direction upon hitting a wall
             // Reverse direction upon hitting a wall
             transform.localScale = new Vector3 (MathF.Abs(transform.localScale.x) * Direction,2,1); // Flip the enemy sprite
-            //transform.localScale = scale;
         }
     }
 }
