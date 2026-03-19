@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 7353020463415919730}
   - component: {fileID: 4419186395279798237}
   m_Layer: 7
-  m_Name: SoldierHeavy
+  m_Name: SoliderMedium
   m_TagString: SoldierBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -295,9 +295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bf1ac9d48bfcb428fb59c167d69560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
-  shootSpeed: 0.25
-  bulletLeft: {fileID: 7396659803964251049, guid: 1f2b9c34b6752184387d4c0bf8de14e9, type: 3}
-  bulletRight: {fileID: 7396659803964251049, guid: 5948859ee35ee874a95b64ce7df8b053, type: 3}
+  speed: 0.5
+  shootSpeed: 0.5
+  bulletLeft: {fileID: 7396659803964251049, guid: da51bc3e76c977346967aa9de70d8c56, type: 3}
+  bulletRight: {fileID: 7396659803964251049, guid: 6574fa7a98ced90468b5c549bb855ab2, type: 3}
   Direction: 1
   bulletSpawnPoint: {fileID: 4456914718825319019}

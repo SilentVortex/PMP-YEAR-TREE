@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2154339642925696302}
   - component: {fileID: 5944905920478543445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,8 +100,8 @@ GameObject:
   - component: {fileID: 490610658125511042}
   - component: {fileID: 7353020463415919730}
   - component: {fileID: 4419186395279798237}
-  m_Layer: 0
-  m_Name: SoldierRegular
+  m_Layer: 7
+  m_Name: SoldierDefault
   m_TagString: SoldierBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,6 +121,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2154339642925696302}
+  - {fileID: 1985931175579301342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8199062897624398085
@@ -268,3 +269,35 @@ MonoBehaviour:
   bulletLeft: {fileID: 7396659803964251049, guid: 6f1f46bc4facb6e4db30afa47e11b15d, type: 3}
   bulletRight: {fileID: 7396659803964251049, guid: 7e355d76cba157d4bab1f20fdba26fe5, type: 3}
   Direction: 1
+  bulletSpawnPoint: {fileID: 1985931175579301342}
+--- !u!1 &6842194294606662879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985931175579301342}
+  m_Layer: 7
+  m_Name: FirpointRegular
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1985931175579301342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842194294606662879}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0007615986}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3575590465057538329}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

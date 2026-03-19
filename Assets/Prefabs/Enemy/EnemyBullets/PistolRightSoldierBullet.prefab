@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1976369037888682464}
   - component: {fileID: 4894290276976455210}
   - component: {fileID: 7389626262589462039}
-  m_Layer: 0
-  m_Name: LeftSoldierBullet
+  m_Layer: 6
+  m_Name: PistolRightSoldierBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,5 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 25
   rb: {fileID: 4894290276976455210}
-  isFiringLeft: 1
-  isFiringRight: 0
+  isFiringLeft: 0
+  isFiringRight: 1
