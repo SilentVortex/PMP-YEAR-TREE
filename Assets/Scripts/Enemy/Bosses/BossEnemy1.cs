@@ -30,7 +30,7 @@ public class BossEnemy1 : MonoBehaviour
         if (rb != null)
         {
             // Apply force in the direction the boss is facing
-            rb.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse); // Adjust bulletSpeed to your desired force
+            rb.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
         }
     }
      void FaceTowardsPlayer()

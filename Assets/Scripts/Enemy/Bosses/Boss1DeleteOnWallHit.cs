@@ -31,7 +31,7 @@ public class Boss1DeleteOnWallHit : MonoBehaviour
     }
     void Boss1Shoot()
     {
-        rb.AddForce(Vector2.right * bulletSpeed, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.left * bulletSpeed, ForceMode2D.Impulse);
     }
     void Boss1DestroyTimer()
     {
