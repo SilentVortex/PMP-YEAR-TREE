@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 490610658125511042}
   - component: {fileID: 7353020463415919730}
   - component: {fileID: 4419186395279798237}
+  - component: {fileID: -8435918439862896120}
   m_Layer: 7
   m_Name: SoliderLight
   m_TagString: SoldierBullet
@@ -222,7 +223,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 69420
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -295,9 +296,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bf1ac9d48bfcb428fb59c167d69560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.75
-  shootSpeed: 0.75
+  speed: 0
+  shootSpeed: 0
   bulletLeft: {fileID: 7396659803964251049, guid: d32399e642a19144c9676969b913f0b4, type: 3}
   bulletRight: {fileID: 7396659803964251049, guid: 8df70e7fc6780c84fa652a07a7b774e2, type: 3}
   Direction: 1
   bulletSpawnPoint: {fileID: 4456914718825319019}
+--- !u!114 &-8435918439862896120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614113808054460846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8251ae61ddb5b484fb8445bcb05e5b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0

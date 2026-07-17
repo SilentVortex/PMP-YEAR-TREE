@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     public Transform player;
 	// Flag set when reaching a goal or instant-death object
     public bool goal = false;
+    // Tracks whether the player is moving to the right
+    public bool facingRight;
+    // Tracks whether the plaer is moving to the left
+    public bool facingLeft;
 
 	// Large damage value used for instant-death collisions
     private float kill = 1000.0f;
@@ -23,6 +27,8 @@ public class PlayerController : MonoBehaviour
     {
 		// Cache the Rigidbody2D component on start for better performance
         rb = GetComponent<Rigidbody2D>();
+        facingRight = true;
+        facingLeft = false;
     }
 
     void Update()
@@ -30,11 +36,11 @@ public class PlayerController : MonoBehaviour
 		// Read horizontal input (-1..1) and move the player accordingly
         float moveInput = Input.GetAxis("Horizontal");
         transform.Translate(moveInput * moveSpeed * Time.deltaTime * Vector2.right);
+        facingDirection(moveInput);
 
 		// If jump button pressed and player is grounded, apply vertical velocity
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-			// NOTE: Rigidbody2D uses 'velocity' in Unity API (rb.velocity = ...).
 			// This code sets linearVelocity; verify your API/version or change to rb.velocity if needed.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
@@ -66,7 +72,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void facingDirection(float moveInput)
+    {
+        if (moveInput > 0f)
+        {
+            facingRight = true;
+            facingLeft = false;
 
+        }
+        else if (moveInput < 0f)
+        {
+            facingLeft = true;
+            facingRight = false;
+
+        }
+    }
 
     void OnCollisionExit2D(Collision2D collision)
     {
