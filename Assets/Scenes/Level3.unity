@@ -307,8 +307,8 @@ Camera:
   m_GameObject: {fileID: 26600153}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.7798742, g: 0.64879113, b: 0, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4866,15 +4866,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 728871206726794564, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.133831
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 728871206726794564, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20.133831
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 728871206726794564, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20.133831
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 728871206726794564, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4916,6 +4916,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 728871206726794564, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 953815432261016620, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4932,6 +4936,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3032757295740441450, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
+      propertyPath: PlayerAnimator
+      value: 
+      objectReference: {fileID: 2115001376}
+    - target: {fileID: 3032757295740441450, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
+      propertyPath: PlayerSpriteRenderer
+      value: 
+      objectReference: {fileID: 2115001380}
     - target: {fileID: 3559146993058694907, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -4942,7 +4954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4595754162502684118, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: shootSpeed
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5296819580869542145, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
       propertyPath: m_Enabled
@@ -5076,6 +5088,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &2115001380 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2010874331007958076, guid: 6129cd1288653d84ab2f4314d65c2347, type: 3}
+  m_PrefabInstance: {fileID: 2115001368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2143659486
 GameObject:
   m_ObjectHideFlags: 0

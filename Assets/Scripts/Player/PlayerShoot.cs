@@ -39,7 +39,7 @@ public class PlayerShoot : MonoBehaviour
                 {
                     Instantiate(bulletLeft, bulletSpawnPoint.position, Quaternion.identity); // Instantiate the bullet at the spawn point
                 }
-                else if (player.GetComponent<PlayerController>().facingRight == true)
+                if (player.GetComponent<PlayerController>().facingRight == true)
                 {
                     Instantiate(bulletRight, bulletSpawnPoint.position, Quaternion.identity); // Instantiate the bullet at the spawn point
                 }   
