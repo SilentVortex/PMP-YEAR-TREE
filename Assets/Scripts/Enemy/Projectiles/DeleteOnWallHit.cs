@@ -7,6 +7,7 @@ public class DeleteOnWallHit : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] bool isFiringLeft; // Determines the direction of the projectile
     [SerializeField] bool isFiringRight; // Determines the direction of the projectile
+    [SerializeField] float destroyTime; // Time after which the projectile will be destroyed
 
     void Start()
     {
@@ -49,6 +50,6 @@ public class DeleteOnWallHit : MonoBehaviour
     void DestroyTimer()
     {
         // Destroy the projectile after a certain time to prevent it from existing indefinitely
-        Destroy(gameObject, 5f); // Adjust the time as needed
+        Destroy(gameObject, destroyTime); // Adjust the time as needed
     }    
 }

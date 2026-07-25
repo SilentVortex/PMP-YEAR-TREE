@@ -11,17 +11,20 @@ public class EnemySoldier : MonoBehaviour
     [SerializeField] GameObject bulletRight; // Bullet prefab to instantiate
     [SerializeField] float Direction = 1; // Direction of movement (1 for right, -1 for left)
     [SerializeField] Transform bulletSpawnPoint; // Spawn point for bullets
+    [SerializeField] private SpriteRenderer EnemySpriteRenderer; // Reference to the enemy's SpriteRenderer
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(Shoot());
+        StartCoroutine(Shoot()); // Start the shooting coroutines
     }
 
     void Update()
     {
         Move();
+        FlipSprite();
+
     }
 
     // Update is called once per frame
@@ -54,8 +57,20 @@ public class EnemySoldier : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             Direction *= -1; // Reverse direction upon hitting a wall
-            // Reverse direction upon hitting a wall
-            transform.localScale = new Vector3 (MathF.Abs(transform.localScale.x) * Direction,2,1); // Flip the enemy sprite
+            FlipSprite();
+        }
+    }
+
+
+    void FlipSprite()
+    {
+        if (EnemySpriteRenderer != null && Direction == -1)
+        {
+            EnemySpriteRenderer.flipX = true; // Flip the sprite horizontally when moving left
+        }
+        else if (EnemySpriteRenderer != null && Direction == 1)
+        {
+            EnemySpriteRenderer.flipX = false; // Reset the sprite flip when moving right
         }
     }
 }
